@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טרייסר מגנט - מרכז מידע למשווקים</title>
+    <!-- External CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+<body>
+    <!-- ===================== חלק ראשון - התחלה ===================== -->
+    
+    <!-- נאבבר -->
+    <nav class="bg-white/10 backdrop-blur-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <img src="https://tracer.co.il/wp-content/uploads/elementor/thumbs/Logo-H-p8d906f0bmrgobnn9uwquzibery89mtbvr1plpc910.png" 
+                 alt="Tracer Logo" 
+                 class="h-12">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                צור קשר
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container mx-auto px-6 py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <h1 class="text-4xl font-bold text-blue-900 leading-tight">
+                        טרייסר מגנט – פתרון המעקב בטכנולוגיית GPS המתקדם והמשתלם ביותר למשתמשי קולנועיות
+                    </h1>
+                    <div class="text-lg text-gray-700 space-y-4">
+                        <p>
+                            <strong>טרייסר מגנט</strong> הוא מכשיר איתור חכם שמספק <strong>שקט נפשי</strong> 
+                            לבעלים של קולנועיות ולקרוביהם, בשילוב שירות מקצועי ואישי. המוצר מותאם במיוחד לאנשים 
+                            בגיל 65+ ולבני משפחתם, המעניקים דגש על בטיחות ונוחות.
+                        </p>
+                        <p>
+                            <strong>ללא חיווט</strong> – המכשיר אינו מחובר למצבר, לכבלים או לכל רכיב אחר, 
+                            מה שמאפשר לו להיות <strong>דיסקרטי לחלוטין</strong>, כך שהגנבים לא ימצאו אותו. 
+                            גם אם ימצאו וינסו להסירו – תתקבל <strong>התראה מיידית</strong> באמצעות שיחת טלפון, 
+                            בזכות <strong>חיישן הרטט הרגיש</strong> שמזהה כל תזוזה או מגע חשוד בכלי.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Device Image with Notifications -->
+                <div class="relative">
+                    <img src="https://i.ibb.co/grvV1RJ/GPS1-1-2-removebg-preview.png" 
+                         alt="Tracer Device" 
+                         class="w-full">
+                    
+                    <!-- WhatsApp Notification -->
+                    <div class="whatsapp-notification notification">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <div class="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center">
+                                    <i class="fab fa-whatsapp text-white text-2xl"></i>
+                                </div>
+                                <span class="notification-badge">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">התראת מערכת טרייסר</h4>
+                                <p class="text-sm">זוהתה תזוזה חשודה בקולנועית!</p>
+                                <p class="text-xs text-gray-600 mt-1">כעת • קולנועית חשמלית</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phone Notification -->
+                    <div class="phone-notification notification">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="relative">
+                                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone-alt text-white text-xl"></i>
+                                </div>
+                                <span class="notification-badge">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg">מוקד טרייסר מתקשר</h4>
+                                <p class="text-sm text-gray-600">התראת חירום - חיישן רטט הופעל</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button class="bg-gray-100 text-gray-800 py-2 px-4 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors">
+                                דחה
+                            </button>
+                            <button class="bg-green-500 text-white py-2 px-4 rounded-full text-sm font-medium hover:bg-green-600 transition-colors">
+                                ענה עכשיו
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave Separator -->
+        <div class="wave-separator relative h-48 mt-20">
+            <svg class="absolute bottom-0 w-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,128C672,128,768,160,864,176C960,192,1056,192,1152,176C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+    <!-- ===================== חלק ראשון - סיום ===================== -->
+
+    <!-- ===================== חלק שני - התחלה ===================== -->
+    <!-- Features Section -->
+    <section class="bg-white py-20 relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
+                יתרונות עיקריים של הטרייסר מגנט
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- מוקד טלפוני בזמן אמת -->
+                <div class="feature-card backdrop-blur-md rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="feature-icon mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">מוקד טלפוני בזמן אמת</h3>
+                    <p class="text-gray-600">קבלת שיחת טלפון במקרים של תנועה חשודה או ניסיון גניבה</p>
+                </div>
+
+                <!-- התראות בוואטסאפ -->
+                <div class="feature-card backdrop-blur-md rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="feature-icon mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">התראות בוואטסאפ</h3>
+                    <p class="text-gray-600">הודעות מיידיות לכל תזוזה או תנועה חריגה</p>
+                </div>
+
+                <!-- מעקב נגיש וקל -->
+                <div class="feature-card backdrop-blur-md rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="feature-icon mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">מעקב נגיש וקל</h3>
+                    <p class="text-gray-600">אפליקציה המאפשרת לדעת היכן ההורה נמצא בכל רגע ובמקרי חירום</p>
+                </div>
+
+                <!-- התקנה פשוטה -->
+                <div class="feature-card backdrop-blur-md rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="feature-icon mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">התקנה פשוטה</h3>
+                    <p class="text-gray-600">מכשיר מגנטי שאינו דורש התקנה מקצועית</p>
+                </div>
+
+                <!-- עמידות גבוהה -->
+                <div class="feature-card backdrop-blur-md rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="feature-icon mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">עמידות גבוהה</h3>
+                    <p class="text-gray-600">תקן IP65 למים ומגנט עוצמתי להיצמדות חזקה במיוחד</p>
+                </div>
+
+                <!-- גמישות תפעולית -->
+                <div class="feature-card backdrop-blur-md rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="feature-icon mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-900">גמישות תפעולית</h3>
+                    <p class="text-gray-600">חיישן רטט רגיש, מצבי עבודה לחיסכון בסוללה, וסוללת ליתיום-פולימר עוצמתית (10,000 mAh)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- המשך מהחלק הקודם -->
+<div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
+        למה כדאי למכור את טרייסר מגנט ישירות בחנות הקולנועיות?
+    </h2>
+
+
+                    
+<!-- מקסום רווחי החנות -->
+<div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+    <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="text-2xl font-bold text-blue-600">1</span>
+        </div>
+        <div>
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">החלטה פשוטה בעת קנייה גדולה</h3>
+            <div class="text-gray-700 leading-relaxed mb-6">
+                <p class="mb-4">
+                    כשלקוח משקיע בין 10,000 ל-30,000 ש"ח בקולנועית, הוספת טרייסר מגנט ב-1,200-1,400 ש"ח בלבד, 
+                    כולל מנוי שנתי, היא החלטה טבעית. מערכת המעקב משדרגת את חוויית הרכישה, מעניקה שקט נפשי 
+                    לבעלים ומשפחתם, ומבטיחה שימוש קל ללא ידע טכנולוגי.
+                </p>
+            </div>
+
+            <!-- Price Comparison Box -->
+            <div class="price-comparison-box bg-white rounded-xl shadow-lg p-6 border border-blue-100 relative">
+                <!-- Recommended Badge -->
+                <div class="recommended-badge absolute -top-4 -right-4 bg-yellow-400 text-blue-900 px-4 py-1 rounded-full font-bold flex items-center gap-2 animate-pulse z-10">
+                    <i class="fas fa-star text-yellow-600"></i>
+                    מומלץ!
+                </div>
+
+                <!-- Header -->
+                <div class="bg-gradient-to-r from-blue-600 to-blue-500 text-white p-4 rounded-t-lg -mt-6 -mx-6 mb-6">
+                    <h4 class="text-xl font-bold">דוגמא להמחשה</h4>
+                </div>
+
+                <!-- Content -->
+                <div class="flex items-start gap-6">
+                    <!-- תמונת הקולנועית -->
+                    <img src="https://danel4u.co.il/wp-content/uploads/2023/12/IMG-20181213-WA00901.jpeg" 
+                         alt="קולנועית לדוגמא" 
+                         class="w-32 h-32 object-cover rounded-lg shadow-md">
+                    
+                    <!-- פרטי המחירים -->
+                    <div class="flex-1">
+                        <!-- מחיר מקורי -->
+                        <div class="mb-4">
+                            <p class="text-gray-600">מחיר קולנועית בלבד:</p>
+                            <p class="text-2xl font-medium">₪24,499 כולל מע"מ</p>
+                        </div>
+                        
+                        <!-- מחיר כולל טרייסר -->
+                        <div class="price-highlight text-blue-600 p-4 rounded-lg bg-blue-50 border border-blue-200">
+                            <p class="font-medium">מחיר כולל מערכת טרייסר:</p>
+                            <p class="text-2xl font-bold glow-text">₪25,699 כולל מע"מ</p>
+                            
+                            <!-- הדגשת ההפרש -->
+                            <div class="price-difference mt-2 inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                                <i class="fas fa-check-circle"></i>
+                                תוספת של ₪1,200 בלבד!
+                            </div>
+                            
+                            <!-- רשימת היתרונות -->
+                            <ul class="text-sm mt-3 space-y-1 text-gray-600">
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    מוקד התראות טלפוני
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    התראות WhatsApp
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    אפליקציה למעקב 24/7
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <i class="fas fa-check text-green-500"></i>
+                                    הגנה מושלמת מפני גניבות
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- מקסום רווחי החנות -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-2xl font-bold text-blue-600">2</span>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">מקסום רווחי החנות</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        המכשיר מוכיח את עצמו עם מעל <strong class="text-blue-600">300 יחידות שנמכרו השנה 
+                        ללקוחות פרטיים</strong>, ללא פרסום ממוקד. עם זאת, החברה מתמקדת בלקוחות עסקיים ואין 
+                        לה יכולת לטפל ישירות בכל הלקוחות הפרטיים. לכן, שילוב המכירה בחנות החוסך זמן וכוח אדם – 
+                        הוא הפתרון המושלם עבורכם ועבורנו.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="text-4xl font-bold text-blue-600 mb-2">300+</div>
+            <div class="text-gray-600">יחידות נמכרו השנה</div>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="text-4xl font-bold text-blue-600 mb-2">₪1,400</div>
+            <div class="text-gray-600">מחיר התחלתי כולל מנוי שנתי(ללקוח)</div>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+            <div class="text-gray-600">תמיכה ושירות מקצועי</div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Resellers Benefits Section -->
+<section class="bg-gradient-to-b from-white to-blue-50 py-20">
+    <div class="container mx-auto px-4">
+        <!-- Main Title -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mb-4">
+                מה אנחנו מספקים למשווקים?
+            </h2>
+            <p class="text-gray-600 text-xl max-w-3xl mx-auto">
+                פתרון מקיף ואוטומטי שמגדיל את רווחי החנות שלכם בקלות, תוך מתן שירות מעולה ללקוחות
+            </p>
+        </div>
+
+        <!-- Benefits Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- שירות מלא ומקיף -->
+            <div class="benefit-card">
+                <div class="icon-wrapper">
+                    <div class="icon-background">
+                        <i class="fas fa-cogs icon"></i>
+                    </div>
+                </div>
+                <h3>שירות מלא ומקיף</h3>
+                <ul class="benefit-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>מערכת אוטומטית להזנת פרטי הזמנה</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>ניהול כל תהליך השירות מא׳ ועד ת׳</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>חיבור לאפליקציה ועדכוני לקוח שוטפים</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- מוקד שירות לקוחות -->
+            <div class="benefit-card">
+                <div class="icon-wrapper">
+                    <div class="icon-background support-bg">
+                        <i class="fas fa-headset icon"></i>
+                    </div>
+                </div>
+                <h3>מוקד שירות לקוחות ייעודי</h3>
+                <div class="highlight-message">
+                    <i class="fas fa-star"></i>
+                    <p>הלקוחות מקבלים שירות ישיר מאיתנו - בלי שתצטרכו להתעסק בזה!</p>
+                </div>
+                <ul class="benefit-list">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>מוקד טלפוני מקצועי זמין</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>טיפול בכל שאלה או בעיה</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- פוטנציאל כלכלי -->
+            <div class="benefit-card">
+                <div class="icon-wrapper">
+                    <div class="icon-background business-bg">
+                        <i class="fas fa-chart-line icon"></i>
+                    </div>
+                </div>
+                <h3>פוטנציאל כלכלי גבוה</h3>
+                <div class="business-highlight">
+                    <p class="title">הגדלת הכנסות משמעותית:</p>
+                    <ul>
+                        <li>
+                            <i class="fas fa-plus-circle"></i>
+                            <span>רווח מיידי ממכירת המערכת</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-plus-circle"></i>
+                            <span>מכירת יותר קולנועיות על ידי מתן פתרון בטיחותי מתקדם, שקט נפשי ללקוחות, ומענה מושלם לצורך במעקב ודאגה לבני המשפחה</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Summary -->
+        <div class="summary-box">
+            <div class="summary-content">
+                <div class="summary-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <div class="summary-text">
+                    <h3>המטרה שלנו: להגדיל את הרווחים שלכם</h3>
+                    <p>עם מערכת אוטומטית לניהול שירות הלקוחות, מוקד טלפוני זמין, ומוצר מוכח שמוכר את עצמו – אנחנו מאפשרים לכם:</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i>להגדיל את סל המוצרים בלי להגדיל את ההתעסקות</li>
+                        <li><i class="fas fa-check"></i>ליצור חוויית לקוח משודרגת</li>
+                        <li><i class="fas fa-check"></i>להגדיל את המכירות והאמון בחנות</li>
+                    </ul>
+                    <div class="final-note">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>לקוח שכבר משקיע ברכישת קולנועית ימצא את השירות כערך מוסף טבעי, ואחוז החידוש הגבוה של המנוי מבטיח לכם הכנסה קבועה!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container mx-auto px-4">
+        <div class="contact-card">
+            <!-- Header -->
+            <div class="contact-header">
+                <h2>מעוניינים לשמוע עוד?</h2>
+                <p>צרו קשר עוד היום ונשמח לענות על כל שאלה</p>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="contact-content">
+                <!-- Profile -->
+                <div class="contact-profile">
+                    <h3>נאור בר ציון</h3>
+                    <p>סמנכ"ל פרוייקטים ארצי</p>
+                </div>
+
+                <!-- Contact Methods -->
+                <div class="contact-methods">
+                    <!-- Email Button -->
+                    <a href="mailto:naor@tracer.co.il" class="contact-button email-button">
+                        <span class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span>naor@tracer.co.il</span>
+                        <i class="fas fa-arrow-left button-arrow"></i>
+                    </a>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/972549760099" class="contact-button whatsapp-button">
+                        <span class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </span>
+                        <span>054-976-0099</span>
+                        <i class="fas fa-arrow-left button-arrow"></i>
+                    </a>
+
+                    <!-- Phone Button -->
+                    <a href="tel:+972549760099" class="contact-button phone-button">
+                        <span class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <span>054-976-0099</span>
+                        <i class="fas fa-arrow-left button-arrow"></i>
+                    </a>
+
+                    <!-- Website Button -->
+                    <a href="https://www.tracer.co.il" target="_blank" class="contact-button website-button">
+                        <span class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </span>
+                        <span>www.tracer.co.il</span>
+                        <i class="fas fa-arrow-left button-arrow"></i>
+                    </a>
+                </div>
+
+                <!-- Additional Note -->
+                <div class="contact-note">
+                    <p>נשמח לענות על כל שאלה ולהתאים עבורכם את הפתרון המושלם</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Clients Section -->
+<section class="clients-section bg-white py-20">
+    <div class="container mx-auto px-4">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mb-4">
+                הלקוחות שסומכים עלינו
+            </h2>
+            <p class="text-gray-600 text-xl max-w-3xl mx-auto">
+                אנחנו גאים לעבוד עם החברות המובילות במשק
+            </p>
+        </div>
+
+        <!-- Clients Logo Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <!-- דנגוט -->
+            <div class="client-card">
+                <img src="https://tracer.co.il/wp-content/uploads/2023/12/dangot.jpg" 
+                     alt="דנגוט" 
+                     class="client-logo">
+            </div>
+
+            <!-- בר אילן -->
+            <div class="client-card">
+                <img src="https://tracer.co.il/wp-content/uploads/2023/12/barilan.jpg" 
+                     alt="בר אילן" 
+                     class="client-logo">
+            </div>
+
+            <!-- ספיר -->
+            <div class="client-card">
+                <img src="https://tracer.co.il/wp-content/uploads/2023/12/sapir.jpg" 
+                     alt="ספיר" 
+                     class="client-logo">
+            </div>
+
+            <!-- טלדור -->
+            <div class="client-card">
+                <img src="https://tracer.co.il/wp-content/uploads/2023/12/taldor.jpg" 
+                     alt="טלדור" 
+                     class="client-logo">
+            </div>
+
+            <!-- מקס סטוק -->
+            <div class="client-card">
+                <img src="https://tracer.co.il/wp-content/uploads/2023/12/maxstock.jpg" 
+                     alt="מקס סטוק" 
+                     class="client-logo">
+            </div>
+
+            <!-- יויס -->
+            <div class="client-card">
+                <img src="https://ambulance.co.il/wp-content/uploads/2021/12/%D7%99%D7%95%D7%99%D7%A1-%D7%9C%D7%95%D7%92%D7%95-3.png" 
+                     alt="יויס" 
+                     class="client-logo">
+            </div>
+
+            <!-- ספייס -->
+            <div class="client-card">
+                <img src="https://spaceclub.co.il/images/logo_space.svg" 
+                     alt="ספייס" 
+                     class="client-logo">
+            </div>
+
+            <!-- הרצל -->
+            <div class="client-card">
+                <img src="https://herzl2.co.il/wp-content/uploads/2022/11/ogo_her.png" 
+                     alt="הרצל" 
+                     class="client-logo">
+            </div>
+
+            <!-- לוגו נוסף -->
+            <div class="client-card">
+                <img src="https://static.wixstatic.com/media/6a5006_fcbfa3a4d5164a7a8964aa3eae846cba~mv2.png/v1/crop/x_0,y_562,w_1499,h_368/fill/w_212,h_52,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/NEW%20LOGO%20with%20blue%20(1)-02.png" 
+                     alt="לוגו חברה" 
+                     class="client-logo">
+            </div>
+        </div>
+    </div>
+</section>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
